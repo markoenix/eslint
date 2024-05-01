@@ -428,7 +428,7 @@ describe("ESLint", () => {
             assert.strictEqual(results.length, 1);
             assert.strictEqual(results[0].filePath, getFixturePath("file.ts"));
             assert.strictEqual(results[0].messages[0].severity, 1);
-            assert.strictEqual(results[0].messages[0].message, "File ignored because no matching configration was supplied.");
+            assert.strictEqual(results[0].messages[0].message, "File ignored because no matching configuration was supplied.");
             assert.strictEqual(results[0].messages[0].output, void 0);
             assert.strictEqual(results[0].errorCount, 0);
             assert.strictEqual(results[0].warningCount, 1);
@@ -1764,7 +1764,7 @@ describe("ESLint", () => {
                 assert.strictEqual(results.length, 1);
                 assert.strictEqual(results[0].filePath, filePath);
                 assert.strictEqual(results[0].messages[0].severity, 1);
-                assert.strictEqual(results[0].messages[0].message, "File ignored because no matching configration was supplied.");
+                assert.strictEqual(results[0].messages[0].message, "File ignored because no matching configuration was supplied.");
                 assert.strictEqual(results[0].errorCount, 0);
                 assert.strictEqual(results[0].warningCount, 1);
                 assert.strictEqual(results[0].fatalErrorCount, 0);
