@@ -609,6 +609,8 @@ describe("ESLint", () => {
                             message: "Parsing error: Unexpected token is",
                             line: 1,
                             column: 19,
+                            endLine: 1,
+                            endColumn: 20,
                             nodeType: null
                         }
                     ],
@@ -650,6 +652,8 @@ describe("ESLint", () => {
                             message: "Parsing error: Unexpected token",
                             line: 1,
                             column: 10,
+                            endLine: 1,
+                            endColumn: 11,
                             nodeType: null
                         }
                     ],
@@ -741,6 +745,8 @@ describe("ESLint", () => {
                             message: "Parsing error: Unexpected token is",
                             line: 1,
                             column: 19,
+                            endLine: 1,
+                            endColumn: 20,
                             nodeType: null
                         }
                     ],
@@ -6954,6 +6960,13 @@ describe("ESLint", () => {
                         parser: {
                             parse(text, parserOptions) {
                                 resolvedParserOptions = parserOptions;
+                                return {
+                                    comments: [],
+                                    tokens: [],
+                                    type: "Root",
+                                    loc: {},
+                                    range: []
+                                };
                             }
                         },
                         parserOptions: {
